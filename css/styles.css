@@ -1,0 +1,227 @@
+/*****************
+*
+* Author: Abhinav 
+*
+*****************/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Unset Defaults and add own defaults */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F3F3F3;
+    /* To have smooth behavior on scroll = useful on ID links */
+    scroll-behavior: smooth;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+/* Setting Font for all headings and other texts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+p,
+a,
+span,
+ul,
+li {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Design Scrollbar */
+body::-webkit-scrollbar {
+    width: 0.50em;
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+/* Design Selection */
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: #5a5a5a;
+}
+
+::selection {
+    color: white;
+    background: #5a5a5a;
+}
+
+
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 98vw;
+    margin: auto;
+}
+
+/* Style All Links  */
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+header {
+    display: block;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+nav ul {
+    display: block;
+    list-style: none;
+}
+
+nav a {
+    background: white;
+    padding: 0.5rem 2rem;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+
+/* masthead */
+#masthead {
+    padding: 1em;
+    margin: 1em 0;
+    text-align: center;
+    background-image: url('../img/money-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    color: white;
+}
+
+/* Articles */
+
+figcaption {
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.article h2 {
+    margin: 0;
+}
+
+/* Portfolio */
+.portfolio {
+    display: grid;
+    grid-gap: 1rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+ul.social-icons {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+i {
+    color: white;
+}
+
+/* Media Query for Tablets and Desktops */
+@media screen and (min-width: 35rem) and (max-width: 80rem) {
+    body {
+        font-size: 1.25rem;
+        /* Font size for tablets */
+        line-height: 1.6;
+        /* Line height for tablets */
+    }
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .article {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .portfolio {
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    body {
+        font-size: 1.5rem;
+        /* Font size for desktops */
+        line-height: 1.6;
+        /* Line height for desktops */
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .article {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
